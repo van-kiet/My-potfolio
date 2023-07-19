@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Potfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- slick -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--line - awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+      integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Link gg font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div id="nav">
+        <div class="header__container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"
+              ><i class="icon-header las la-kiss"></i
+            ></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Resume</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Skills</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Potfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Home -->
+    <section class="home">
+      <div class="home__container">
+        <div class="row">
+          <div class="home__content col-6">
+            <p class="home__p">Welcome!</p>
+            <div class="home__name animate__ animate__fadeInLeft wow animated">
+              <h1 id="typing">I'm <span id="typingText"></span></h1>
+              <span class="item">Vo Van Kiet</span>
+              <span class="item">a Front-end Developer</span>
+              <p>
+                I'm passionate about learning new technologies and always keep
+                concentrated on improving my self skills. Being patient and
+                responsible for working help me implement completely assigned
+                tasks.
+              </p>
+              <div class="home__link">
+                <div class="link">
+                  <button class="hover-btn" id="main-button">
+                    <i class="las la-link"></i>
+                  </button>
+                  <p class="hover-text-1">My Links</p>
+                </div>
+                <div id="button-container">
+                  <div class="link">
+                    <button class="hover-btn">
+                      <a href="https://www.facebook.com/chuskitt.0104/"
+                        ><i class="lab la-facebook"></i
+                      ></a>
+                    </button>
+                    <p class="hover-text">My Facebook</p>
+                  </div>
+                  <div class="link">
+                    <button class="hover-btn">
+                      <a href="https://www.instagram.com/chuskitt.0104_/"
+                        ><i class="lab la-instagram"></i
+                      ></a>
+                    </button>
+                    <p class="hover-text">My Instagram</p>
+                  </div>
+                  <div class="link">
+                    <button class="hover-btn">
+                      <a href="https://github.com/van-kiet"
+                        ><i class="lab la-github"></i
+                      ></a>
+                    </button>
+                    <p class="hover-text">My Github</p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="./files/CV_Vo_Van_Kiet_Front_end_Developer _Intern.pdf"
+                download
+              >
+                <button id="myButton__download">DOWNLOAD CV</button>
+              </a>
+            </div>
+          </div>
+          <div class="home_cv col-6">
+            <img src="./images/IMG_3370.PNG" alt="" />
+          </div>
+        </div>
+        <div class="message">
+          <h2>
+            I am a recent graduate with a major in Front-end programming, and I
+            am eager to join your team to develop myself along with the company.
+          </h2>
+          <div class="message__text">
+            <p>
+              Throughout my studies and internships, I have accumulated
+              knowledge and experience in the Front-end programming field. I
+              have skills in HTML, CSS, JavaScript, and frameworks such as
+              ReactJS, Bootstrap ,Ant Design, etc. I always strive to learn,
+              research to improve my skills and be able to meet job
+              requirements.
+            </p>
+            <p>
+              I am very excited to become a part of your company, contribute to
+              the company's development with my experience and knowledge. I
+              commit to working hard, contributing positively, and continuously
+              learning to complete the assigned tasks well.
+            </p>
+            <p>
+              I hope to receive your attention and have the opportunity to
+              interview to discuss more about my experience and skills.
+            </p>
+            <div class="message__icon">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <button>see more about skills and projects</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about__container">
+        <div class="about__content py-4">
+          <h1>About me</h1>
+          <div class="about__content__child row pt-5">
+            <div class="img__me col-6">
+              <img src="./images/IMG_2614.jpg" alt="hinhanh" />
+            </div>
+            <div class="about__me col-6">
+              <ul>
+                <li>
+                  <a class="about__me__child">
+                    <span><i class="las la-user"></i> Name:</span>
+                    <span>Vo Van Kiet</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="about__me__child">
+                    <span><i class="las la-envelope"></i> Email:</span>
+                    <span>vovankiet01042001@gmail.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="about__me__child">
+                    <span><i class="las la-phone"></i> Phone:</span>
+                    <span>0394-154-105</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="about__me__child">
+                    <span><i class="las la-map-marker"></i> Address:</span>
+                    <span>Tan Phu , Ho Chi Minh </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="resume">
+      <div class="resume__container">
+        <h1>My Resume</h1>
+        <div class="row">
+          <div class="col-6 resume__card">
+            <div class="resume__card__1">
+              <h2>EXPERIENCE</h2>
+              <h3>Personal Projects</h3>
+              <p>July 2022 - Present</p>
+              <div class="card__child">
+                <ul>
+                  <li>Learning and practicing with many Front-end projects</li>
+                  <li>
+                    Working on my own projects with learned Front-end skills
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 resume__card">
+            <div class="resume__card__1">
+              <h2>EDUCATION</h2>
+              <h3>Cybersoft - Cyberlearn Programing Education Center</h3>
+              <p>July 2022 - Present</p>
+              <ul>
+                <li>
+                  Programming course: thinking in programming, problem-solving,
+                  OOP
+                </li>
+                <li>
+                  Front-end Foundation course: basic knowledge of HTML5, CSS3,
+                  Boostrap 4, SASS/SCSS, Javascript (ES5/ES6), Jquery, AJAX,
+                  Git, ...
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="skills__container">
+        <div class="skills__content">
+          <h1>My Skills</h1>
+          <div class="row">
+            <div class="col-12">
+              <ul>
+                <li>
+                  <span>HTML/CSS</span>
+                  <span
+                    ><img
+                      src="https://vtquan123-portfolio.netlify.app/assets/img/SVG/html5.svg"
+                      alt=""
+                  /></span>
+                  <span
+                    ><img
+                      src="https://vtquan123-portfolio.netlify.app/assets/img/SVG/css-3.svg"
+                      alt=""
+                  /></span>
+                  <span
+                    ><img
+                      src="https://vtquan123-portfolio.netlify.app/assets/img/SVG/bootstrap-4.svg"
+                      alt=""
+                  /></span>
+
+                  <span
+                    ><img
+                      src="https://vtquan123-portfolio.netlify.app/assets/img/SVG/sass-1.svg"
+                      alt=""
+                  /></span>
+                  <span>Responsive</span>
+                </li>
+                <li>
+                  <span>React</span>
+                  <span>ReacJs basic</span>
+                  <span>Router</span>
+                  <span>Redux</span>
+                  <span>React Hooks</span>
+                </li>
+                <li>
+                  <span>Javascript</span>
+                  <span>ES5/ES6</span>
+                  <span
+                    ><img
+                      src="https://vtquan123-portfolio.netlify.app/assets/img/SVG/jquery-1.svg"
+                      alt=""
+                  /></span>
+                  <span>AJAX</span>
+                  <span>RESTfull Api</span>
+                  <span>AXIOS</span>
+                </li>
+                <li>
+                  <span>Git</span>
+                  <span>Git basic</span>
+                </li>
+                <li>
+                  <span>Knowledge base</span>
+                  <span>OOP</span>
+                  <span>Data Structure and Algorithms</span>
+                </li>
+                <li>
+                  <span>Softs skills</span>
+                  <span>Teamwork</span>
+                  <span>Self study</span>
+                </li>
+                <li>
+                  <span>Languages</span>
+                  <span>English: Basic reading and writing</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="potfolio">
+      <div class="potfolio__container">
+        <!-- Modal -->
+
+        <div
+          class="modal fade slideshow-button"
+          id="exampleModalCenter"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div
+            class="custom-modal modal-dialog modal-dialog-centered"
+            role="document"
+          >
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="modal-video" class="modal-body slideshow">
+                <iframe
+                  src="https://www.youtube.com/embed/OycxSRkN6ck?enablejsapi=1"
+                  title="YouTube video player"
+                  allowfullscreen
+                  id="player-1"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1>My Potfolio</h1>
+        <div class="one-time">
+          <div class="slide">
+            <div class="project">
+              <div class="project__img__1">
+                <div class="link__project">
+                  <i
+                    class="las la-play-circle"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter"
+                    data-video="https://www.youtube.com/embed/YF9VSrKGMjM?enablejsapi=1"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="project__detail">
+              <h4>My Potfolio</h4>
+              <p>Jun 2023 - Jul 2023</p>
+              <ul>
+                <li>
+                  <span>Description: </span>
+                  E-learning is digital-based learning and training accessible
+                  on devices with internet for both teachers and students.
+                </li>
+                <li>
+                  <span>Responsibility: </span>
+                  Development
+                </li>
+                <li>
+                  <span>Technology:</span> HTML5 , CSS3, Jquery, Bootstrap 4
+                </li>
+              </ul>
+              <a href="">Link Github</a>
+              <a href="">Link Demo</a>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="project">
+              <div class="project__img__2">
+                <div class="link__project">
+                  <i
+                    class="las la-play-circle"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter"
+                    data-video="https://www.youtube.com/embed/OycxSRkN6ck?enablejsapi=1"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="project__detail">
+              <h4>My Potfolio</h4>
+              <p>Jun 2023 - Jul 2023</p>
+              <ul>
+                <li>
+                  <span>Description: </span>
+                  E-learning is digital-based learning and training accessible
+                  on devices with internet for both teachers and students.
+                </li>
+                <li>
+                  <span>Responsibility: </span>
+                  Development
+                </li>
+                <li>
+                  <span>Technology:</span>
+                  HTML5 , CSS3, Jquery, Bootstrap 4
+                </li>
+              </ul>
+              <a href="">Link Github</a>
+              <a href="">Link Demo</a>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="project">
+              <div class="project__img__3">
+                <div class="link__project">
+                  <i
+                    class="las la-play-circle"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter"
+                    data-video="https://www.youtube.com/embed/TMq5iZXpG6I?enablejsapi=1"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="project__detail">
+              <h4>My Potfolio</h4>
+              <p>Jun 2023 - Jul 2023</p>
+              <ul>
+                <li>
+                  <span>Description: </span>
+                  E-learning is digital-based learning and training accessible
+                  on devices with internet for both teachers and students.
+                </li>
+                <li>
+                  <span>Responsibility: </span>
+                  Development
+                </li>
+                <li>
+                  <span>Technology:</span> HTML5 , CSS3, Jquery, Bootstrap 4
+                </li>
+              </ul>
+              <a href="">Link Github</a>
+              <a href="">Link Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__title">
+          <h1>Get in touch with Me</h1>
+          <p>
+            Thank you to spend your time visiting my page! Please feel free to
+            send me some messages, hope that we can have a chance to work
+            together.
+          </p>
+        </div>
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-6 footer__info">
+              <h3>Vo Van Kiet</h3>
+              <ul>
+                <li>
+                  <span> <i class="las la-map-marker-alt"></i> Location </span>
+                  <a href=""> Tan Phu , Tp Ho Chi Minh</a>
+                </li>
+                <li>
+                  <span><i class="las la-phone"></i> Phone</span>
+                  <a href="#">0394-154-105</a>
+                </li>
+                <li>
+                  <span><i class="lab la-facebook-f"></i> Facebook </span>
+                  <a href="">Van Kiet</a>
+                </li>
+                <li>
+                  <span><i class="las la-envelope"></i> Mail</span>
+                  <a href="#"> vovankiet01042001@gamil.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 footer__form">
+              <form method="post" action="sendmail.php">
+                <label for="name">Tên của bạn</label>
+                <input type="text" id="name" name="name" required />
+                <br />
+                <label for="email">Địa chỉ email của bạn</label>
+                <input type="email" id="email" name="email" required />
+                <br />
+                <label for="subject">Chủ đề</label>
+                <input type="text" id="subject" name="subject" required />
+                <br />
+                <label for="message">Nội dung tin nhắn</label>
+                <textarea id="message" name="message" required></textarea>
+                <br />
+                <button type="submit">Gửi</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- POPPER -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <!-- slick -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"
+      integrity="sha512-7rusk8kGPFynZWu26OKbTeI+QPoYchtxsmPeBqkHIEXJxeun4yJ4ISYe7C6sz9wdxeE1Gk3VxsIWgCZTc+vX3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"
+      integrity="sha512-igl8WEUuas9k5dtnhKqyyld6TzzRjvMqLC79jkgT3z02FvJyHAuUtyemm/P/jYSne1xwFI06ezQxEwweaiV7VA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".one-time").slick({});
+    </script>
+
+    <!-- JS -->
+    <script>
+      $(document).ready(function () {
+        $(".slideshow-button").click(function () {
+          player.stopVideo();
+        });
+      });
+    </script>
+    <script>
+      $(".link__project i").click(function () {
+        var videoUrl = $(this).data("video");
+        $("#modal-video iframe").attr("src", videoUrl);
+        $("#exampleModalCenter").modal("show");
+      });
+    </script>
+    <script src="./index.js"></script>
+  </body>
+</html>
