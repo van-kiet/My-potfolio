@@ -108,3 +108,100 @@ let player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("player-1");
 }
+
+const submitButton = document.getElementById("submit-button");
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let subject = document.getElementById("subject").value;
+  let message = document.getElementById("message").value;
+
+  let data = {
+    "entry.392401802": name,
+    "entry.485617946": email,
+    "entry.1304479412": subject,
+    "entry.498936137": message,
+  };
+  if (name === "" || email === "" || subject === "" || message === "") {
+    if (name === "") {
+      document.getElementById("helpName").style.display = "block";
+    }
+    if (email === "") {
+      document.getElementById("helpEmail").style.display = "block";
+    }
+
+    if (subject === "") {
+      document.getElementById("helpSubject").style.display = "block";
+    }
+    if (message === "") {
+      document.getElementById("helpMessage").style.display = "block";
+    }
+    alert("cc");
+  } else {
+    let queryString = new URLSearchParams(data);
+    queryString = queryString.toString();
+    let xhr = new XMLHttpRequest();
+    xhr.open(
+      "POST",
+      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCNgz4KJe8A28Z7kH4FMAiEtzR6tb_TYd0rr8slONN3MLxEA/formResponse",
+      true
+    );
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send(queryString);
+    alert("submitted successfully");
+    name = "";
+    email = "";
+    subject = "";
+    message = "";
+  }
+});
+
+const nameInput = document.getElementById("name");
+nameInput.addEventListener("blur", validateName);
+
+const emailInput = document.getElementById("email");
+emailInput.addEventListener("blur", validateEmail);
+
+const phoneInput = document.getElementById("subject");
+phoneInput.addEventListener("blur", validateSubject);
+
+const messageInput = document.getElementById("message");
+messageInput.addEventListener("blur", validateMessage);
+
+function validateName() {
+  let name = document.getElementById("name").value;
+
+  if (name === "") {
+    document.getElementById("helpName").style.display = "block";
+  } else {
+    document.getElementById("helpName").style.display = "none";
+  }
+}
+
+function validateEmail() {
+  let email = document.getElementById("email").value;
+  if (email === "") {
+    document.getElementById("helpEmail").style.display = "block";
+  } else {
+    document.getElementById("helpEmail").style.display = "none";
+  }
+}
+
+function validateSubject() {
+  let subject = document.getElementById("subject").value;
+  if (subject === "") {
+    document.getElementById("helpSubject").style.display = "block";
+  } else {
+    document.getElementById("helpSubject").style.display = "none";
+  }
+}
+
+function validateMessage() {
+  let message = document.getElementById("message").value;
+  if (message === "") {
+    document.getElementById("helpMessage").style.display = "block";
+  } else {
+    document.getElementById("helpMessage").style.display = "none";
+  }
+}

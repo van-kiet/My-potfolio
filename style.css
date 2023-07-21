@@ -538,11 +538,16 @@ header .header__container div ul li a {
   cursor: pointer;
 }
 
+.footer {
+  background-color: #2e2e2e;
+  color: white;
+}
 .footer .footer__container {
   max-width: 1600px;
   margin: 0 auto;
 }
 .footer .footer__container .footer__title {
+  padding: 30px 0;
   width: 70%;
   text-align: center;
   margin: 0 auto;
@@ -550,6 +555,15 @@ header .header__container div ul li a {
 .footer .footer__container .footer__content {
   width: 80%;
   margin: 0 auto;
+}
+.footer .footer__container .footer__content .footer__info h2 {
+  font-family: "Italianno", cursive;
+  color: red;
+  text-align: center;
+}
+.footer .footer__container .footer__content .footer__info hr {
+  background-color: #ffebee;
+  width: 70%;
 }
 .footer .footer__container .footer__content .footer__info ul li {
   list-style-type: circle;
@@ -563,6 +577,33 @@ header .header__container div ul li a {
 .footer .footer__container .footer__content .footer__info ul li a {
   color: red;
   text-decoration: none;
+}
+.footer .footer__container .footer__content .footer__form form {
+  width: 80%;
+  margin: 0 auto;
+}
+.footer .footer__container .footer__content .footer__form form small {
+  display: none;
+}
+.footer .footer__container .footer__content .footer__form form input {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  height: 40px;
+  color: white;
+  border: 1px solid white;
+}
+.footer .footer__container .footer__content .footer__form form input:focus {
+  outline: white;
+  box-shadow: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.footer .footer__container .footer__content .footer__form form textarea {
+  color: white;
+  resize: none;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .custom-modal {

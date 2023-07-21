@@ -591,10 +591,13 @@ header {
   }
 }
 .footer {
+  background-color: #2e2e2e;
+  color: white;
   .footer__container {
     max-width: 1600px;
     margin: 0 auto;
     .footer__title {
+      padding: 30px 0;
       width: 70%;
       text-align: center;
       margin: 0 auto;
@@ -603,6 +606,16 @@ header {
       width: 80%;
       margin: 0 auto;
       .footer__info {
+        // background-color: white;
+        h2 {
+          font-family: "Italianno", cursive;
+          color: red;
+          text-align: center;
+        }
+        hr {
+          background-color: #ffebee;
+          width: 70%;
+        }
         ul {
           li {
             list-style-type: circle;
@@ -616,6 +629,35 @@ header {
               color: red;
               text-decoration: none;
             }
+          }
+        }
+      }
+      .footer__form {
+        form {
+          width: 80%;
+          margin: 0 auto;
+          small {
+            display: none;
+          }
+          input {
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0);
+            height: 40px;
+            color: white;
+            border: 1px solid white;
+            &:focus {
+              outline: white;
+              box-shadow: none;
+              border-color: #80bdff;
+              box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+          }
+          textarea {
+            color: white;
+            resize: none;
+            height: 100px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0);
           }
         }
       }

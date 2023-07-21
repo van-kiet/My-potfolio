@@ -50,6 +50,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -512,41 +516,85 @@
         <div class="footer__content">
           <div class="row">
             <div class="col-6 footer__info">
-              <h3>Vo Van Kiet</h3>
+              <h2>Vo Van Kiet</h2>
+              <hr />
               <ul>
                 <li>
                   <span> <i class="las la-map-marker-alt"></i> Location </span>
-                  <a href=""> Tan Phu , Tp Ho Chi Minh</a>
+                  <a
+                    href="https://www.google.com/maps/place/Ho%C3%A0+Th%E1%BA%A1nh,+T%C3%A2n+Ph%C3%BA,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh/@10.7783366,106.6368413,15z/data=!3m1!4b1!4m6!3m5!1s0x31752ea4461ff16f:0x6b8d6064202fc233!8m2!3d10.7783152!4d106.6372355!16s%2Fg%2F11dyk6cg6?hl=vi-VN&entry=ttu"
+                  >
+                    Hòa Thạnh, Tan Phu , Tp Ho Chi Minh</a
+                  >
                 </li>
                 <li>
                   <span><i class="las la-phone"></i> Phone</span>
-                  <a href="#">0394-154-105</a>
+                  <a href="#1">0394-154-105</a>
                 </li>
                 <li>
                   <span><i class="lab la-facebook-f"></i> Facebook </span>
-                  <a href="">Van Kiet</a>
+                  <a href="https://www.facebook.com/chuskitt.0104">Van Kiet</a>
                 </li>
                 <li>
                   <span><i class="las la-envelope"></i> Mail</span>
-                  <a href="#"> vovankiet01042001@gamil.com</a>
+                  <a href="#1"> vovankiet01042001@gamil.com</a>
                 </li>
               </ul>
             </div>
             <div class="col-6 footer__form">
-              <form method="post" action="sendmail.php">
-                <label for="name">Tên của bạn</label>
-                <input type="text" id="name" name="name" required />
-                <br />
-                <label for="email">Địa chỉ email của bạn</label>
-                <input type="email" id="email" name="email" required />
-                <br />
-                <label for="subject">Chủ đề</label>
-                <input type="text" id="subject" name="subject" required />
-                <br />
-                <label for="message">Nội dung tin nhắn</label>
-                <textarea id="message" name="message" required></textarea>
-                <br />
-                <button type="submit">Gửi</button>
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Fullname</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                  />
+                  <small class="text-danger" id="helpName"
+                    >Please enter your fullname !
+                  </small>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                  />
+                  <small id="helpEmail" class="text-danger"
+                    >Please enter your email !</small
+                  >
+                </div>
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    type="subject"
+                    class="form-control"
+                    id="subject"
+                    name="subject"
+                  />
+                  <small id="helpSubject" class="text-danger"
+                    >Please enter your subject !</small
+                  >
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                  <small id="helpMessage" class="text-danger"
+                    >Please enter your message</small
+                  >
+                </div>
+                <button type="submit" class="btn btn-danger" id="submit-button">
+                  Send Message
+                </button>
               </form>
             </div>
           </div>
