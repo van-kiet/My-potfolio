@@ -32,9 +32,12 @@ header .header__container nav a i {
   font-size: 36px;
   color: white;
 }
-header .header__container nav .collapse.show {
+header .header__container nav button i {
+  font-size: 36px;
+  color: white;
+}
+header .header__container div ul {
   text-align: center;
-  transition: all 0.3s;
 }
 header .header__container div ul li {
   margin-right: 24px;
@@ -44,7 +47,7 @@ header .header__container div ul li a {
 }
 
 .home {
-  padding: 140px 80px;
+  padding: 140px 15px;
   overflow: hidden;
   height: 100%;
   background-image: url(./images/358018627_800737231592718_7532295949799559565_n.png);
@@ -66,7 +69,7 @@ header .header__container div ul li a {
   color: white;
 }
 .home .home__container .row .home__content .home__name .item {
-  opacity: 0;
+  display: none;
 }
 .home .home__container .row .home__content .home__name h1 {
   height: 150px;
@@ -206,11 +209,17 @@ header .header__container div ul li a {
 .home .home__container .row .home_cv {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   background-color: rgb(223, 223, 223);
   border-radius: 100px;
+  overflow: hidden;
+  height: 600px;
+  position: relative;
 }
 .home .home__container .row .home_cv img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 350px;
 }
 .home .home__container .message {
@@ -633,6 +642,14 @@ header .header__container div ul li a {
   align-items: center;
 }
 
+@media (max-width: 1200px) {
+  .home .home__content .home__name h1 {
+    font-size: 3rem !important;
+  }
+  .home .home_cv img {
+    width: 300px !important;
+  }
+}
 @keyframes fall {
   0% {
     transform: translateY(-20px);

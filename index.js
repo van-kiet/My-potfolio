@@ -137,7 +137,7 @@ submitButton.addEventListener("click", (e) => {
     if (message === "") {
       document.getElementById("helpMessage").style.display = "block";
     }
-    alert("cc");
+    alert("Please fill out the form !");
   } else {
     let queryString = new URLSearchParams(data);
     queryString = queryString.toString();
@@ -149,11 +149,11 @@ submitButton.addEventListener("click", (e) => {
     );
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send(queryString);
-    alert("submitted successfully");
-    name = "";
-    email = "";
-    subject = "";
-    message = "";
+    alert("Submitted successfully");
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("subject").value = "";
+    document.getElementById("message").value = "";
   }
 });
 
