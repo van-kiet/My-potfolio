@@ -167,11 +167,12 @@ header .header__container div ul li a:hover {
   width: 40px;
   height: 40px;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home .home__container .row .home__content .home__link #button-container button i {
   font-size: 25px;
-  align-items: center;
-  line-height: 40px;
   color: black;
 }
 .home .home__container .row .home__content .home__link #button-container.show {
