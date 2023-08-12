@@ -60,11 +60,11 @@
   <body>
     <!-- Header -->
     <header id="header">
-      <div id="nav">
+      <div id="nav" class="background">
         <div class="header__container">
           <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"
-              ><i class="icon-header las la-kiss"></i
+            <a class="navbar-brand" href="#home">
+              <i class="icon-header las la-house-damage"></i
             ></a>
             <button
               class="navbar-toggler"
@@ -109,7 +109,7 @@
     <section id="home" class="home">
       <div class="home__container">
         <div class="row">
-          <div class="home__content col-md-7 col-lg-7 col-xl-6">
+          <div class="home__content col-md-12 col-lg-7 col-xl-6">
             <p class="home__p">Welcome!</p>
             <div class="home__name">
               <h1 id="typing">I'm <span id="typingText"></span></h1>
@@ -126,7 +126,7 @@
                   <button class="hover-btn" id="main-button">
                     <i class="las la-link"></i>
                   </button>
-                  <p class="hover-text-1">My Links</p>
+                  <p id="hover-text" class="hover-text">My Links</p>
                 </div>
                 <div id="button-container">
                   <div class="link">
@@ -163,7 +163,7 @@
               </a>
             </div>
           </div>
-          <div class="home_cv col-md-5 col-lg-5 col-xl-6">
+          <div class="home_cv col-md-12 col-lg-5 col-xl-6 mt-4">
             <img src="./images/IMG_3370.PNG" alt="" />
           </div>
         </div>
@@ -172,7 +172,8 @@
             I am a recent graduate with a major in Front-end programming, and I
             am eager to join your team to develop myself along with the company.
           </h2>
-          <div class="message__text">
+
+          <div id="message__text" class="message__text">
             <p>
               Throughout my studies and internships, I have accumulated
               knowledge and experience in the Front-end programming field. I
@@ -191,47 +192,47 @@
               I hope to receive your attention and have the opportunity to
               interview to discuss more about my experience and skills.
             </p>
-            <div class="message__icon">
-              <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <button>see more about skills and projects</button>
           </div>
+          <div class="message__icon">
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <button id="button-show" onclick="showText()">see more</button>
         </div>
       </div>
     </section>
     <section id="about" class="about">
       <div class="about__container">
-        <div class="about__content py-4">
+        <div class="about__content">
           <h1>About me</h1>
           <div class="about__content__child row pt-5">
-            <div class="img__me col-6">
+            <div class="img__me col-lg-5 col-md-12">
               <img src="./images/IMG_2614.jpg" alt="hinhanh" />
             </div>
-            <div class="about__me col-6">
+            <div class="about__me col-lg-7 col-md-12">
               <ul>
                 <li>
-                  <a class="about__me__child">
+                  <p class="about__me__child">
                     <span><i class="las la-user"></i> Name:</span>
                     <span>Vo Van Kiet</span>
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a class="about__me__child">
+                  <p class="about__me__child">
                     <span><i class="las la-envelope"></i> Email:</span>
                     <span>vovankiet01042001@gmail.com</span>
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a class="about__me__child">
+                  <p class="about__me__child">
                     <span><i class="las la-phone"></i> Phone:</span>
                     <span>0394-154-105</span>
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a class="about__me__child">
+                  <p class="about__me__child">
                     <span><i class="las la-map-marker"></i> Address:</span>
                     <span>Tan Phu , Ho Chi Minh </span>
-                  </a>
+                  </p>
                 </li>
               </ul>
             </div>
@@ -243,7 +244,7 @@
       <div class="resume__container">
         <h1>My Resume</h1>
         <div class="row">
-          <div class="col-6 resume__card">
+          <div class="col-12 resume__card">
             <div class="resume__card__1">
               <h2>EXPERIENCE</h2>
               <h3>Personal Projects</h3>
@@ -258,22 +259,24 @@
               </div>
             </div>
           </div>
-          <div class="col-6 resume__card">
+          <div class="col-12 resume__card">
             <div class="resume__card__1">
               <h2>EDUCATION</h2>
               <h3>Cybersoft - Cyberlearn Programing Education Center</h3>
-              <p>July 2022 - Present</p>
-              <ul>
-                <li>
-                  Programming course: thinking in programming, problem-solving,
-                  OOP
-                </li>
-                <li>
-                  Front-end Foundation course: basic knowledge of HTML5, CSS3,
-                  Boostrap 4, SASS/SCSS, Javascript (ES5/ES6), Jquery, AJAX,
-                  Git, ...
-                </li>
-              </ul>
+              <div class="card__child">
+                <p>July 2022 - Present</p>
+                <ul>
+                  <li>
+                    Programming course: thinking in programming,
+                    problem-solving, OOP
+                  </li>
+                  <li>
+                    Front-end Foundation course: basic knowledge of HTML5, CSS3,
+                    Boostrap 4, SASS/SCSS, Javascript (ES5/ES6), Jquery, AJAX,
+                    Git, ...
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -286,67 +289,72 @@
           <div class="row">
             <div class="col-12">
               <ul>
-                <li>
-                  <span>HTML/CSS</span>
-                  <span
+                <li id="ccc" class="skill__all">
+                  <span class="skill__type">HTML/CSS</span>
+                  <span class="skill__child"
                     ><img
                       src="https://vtquan123-portfolio.netlify.app/assets/img/SVG/html5.svg"
                       alt=""
                   /></span>
-                  <span
+                  <span class="skill__child"
                     ><img
                       src="https://vtquan123-portfolio.netlify.app/assets/img/SVG/css-3.svg"
                       alt=""
                   /></span>
-                  <span
+                  <span class="skill__child"
                     ><img
                       src="https://vtquan123-portfolio.netlify.app/assets/img/SVG/bootstrap-4.svg"
                       alt=""
                   /></span>
 
-                  <span
+                  <span class="skill__child"
                     ><img
                       src="https://vtquan123-portfolio.netlify.app/assets/img/SVG/sass-1.svg"
                       alt=""
                   /></span>
-                  <span>Responsive</span>
+                  <span class="skill__child">Responsive</span>
                 </li>
-                <li>
-                  <span>React</span>
-                  <span>ReacJs basic</span>
-                  <span>Router</span>
-                  <span>Redux</span>
-                  <span>React Hooks</span>
+                <li class="skill__all">
+                  <span class="skill__type">React</span>
+                  <span class="skill__child">ReacJs basic</span>
+                  <span class="skill__child">Router</span>
+                  <span class="skill__child">Redux</span>
+                  <span class="skill__child">React Hooks</span>
                 </li>
-                <li>
-                  <span>Javascript</span>
-                  <span>ES5/ES6</span>
-                  <span
+                <li class="skill__all">
+                  <span class="skill__type">Javascript</span>
+                  <span class="skill__child">ES5/ES6</span>
+                  <span class="skill__child"
                     ><img
+                      class="skill__all"
                       src="https://vtquan123-portfolio.netlify.app/assets/img/SVG/jquery-1.svg"
                       alt=""
                   /></span>
-                  <span>AJAX</span>
-                  <span>RESTfull Api</span>
-                  <span>AXIOS</span>
+                  <span class="skill__child">AJAX</span>
+                  <span class="skill__child">RESTfull Api</span>
+                  <span class="skill__child">AXIOS</span>
                 </li>
-                <li>
-                  <span>Git</span>
-                  <span>Git basic</span>
+                <li class="skill__all">
+                  <span class="skill__type">Git</span>
+                  <span class="skill__child">Git basic</span>
                 </li>
-                <li>
-                  <span>Knowledge base</span>
-                  <span>OOP</span>
-                  <span>Data Structure and Algorithms</span>
+                <li class="skill__all">
+                  <span class="skill__type">Knowledge base</span>
+                  <span class="skill__child">OOP</span>
+                  <span class="skill__custom skill__child"
+                    >Data Structure and Algorithms</span
+                  >
                 </li>
-                <li>
-                  <span>Softs skills</span>
-                  <span>Teamwork</span>
-                  <span>Self study</span>
+                <li class="skill__all">
+                  <span class="skill__type">Softs skills</span>
+                  <span class="skill__child">Teamwork</span>
+                  <span class="skill__child">Self study</span>
                 </li>
-                <li>
-                  <span>Languages</span>
-                  <span>English: Basic reading and writing</span>
+                <li class="skill__all">
+                  <span class="skill__type">Languages</span>
+                  <span class="skill__custom skill__child"
+                    >English: Basic reading and writing</span
+                  >
                 </li>
               </ul>
             </div>
@@ -403,6 +411,43 @@
                     type="button"
                     data-toggle="modal"
                     data-target="#exampleModalCenter"
+                    data-video="https://www.youtube.com/embed/OycxSRkN6ck?enablejsapi=1"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="project__detail">
+              <h4>My Potfolio</h4>
+              <p>Jun 2023 - Jul 2023</p>
+              <ul>
+                <li>
+                  <span>Description: </span>
+                  My portfolio where you can get my information and my done
+                  projects
+                </li>
+                <li>
+                  <span>Responsibility: </span>
+                  Development
+                </li>
+                <li>
+                  <span>Technology:</span> HTML5 , CSS3, Jquery, Bootstrap
+                  4,Javascript ES6 , SASS/SCSS
+                </li>
+              </ul>
+              <a href="https://github.com/van-kiet/My-potfolio">Link Github</a>
+              <a href="">Link Demo</a>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="project">
+              <div class="project__img__2">
+                <div class="link__project">
+                  <i
+                    class="las la-play-circle"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter"
                     data-video="https://www.youtube.com/embed/YF9VSrKGMjM?enablejsapi=1"
                   ></i>
                 </div>
@@ -422,17 +467,17 @@
                   Development
                 </li>
                 <li>
-                  <span>Technology:</span> HTML5 , CSS3, Jquery, Bootstrap 4
+                  <span>Technology:</span>
+                  HTML5 , CSS3, Jquery, Bootstrap 4 , Ant Design , ReactJs
                 </li>
               </ul>
-              <a href="">Link Github</a>
-              <a href="">Link Demo</a>
+              <a href="https://github.com/phuochanh/Elearning">Link Github</a>
+              <a href="https://elearning-ebon.vercel.app">Link Demo</a>
             </div>
           </div>
-
           <div class="slide">
             <div class="project">
-              <div class="project__img__2">
+              <div class="project__img__3">
                 <div class="link__project">
                   <i
                     class="las la-play-circle"
@@ -450,44 +495,8 @@
               <ul>
                 <li>
                   <span>Description: </span>
-                  E-learning is digital-based learning and training accessible
-                  on devices with internet for both teachers and students.
-                </li>
-                <li>
-                  <span>Responsibility: </span>
-                  Development
-                </li>
-                <li>
-                  <span>Technology:</span>
-                  HTML5 , CSS3, Jquery, Bootstrap 4
-                </li>
-              </ul>
-              <a href="">Link Github</a>
-              <a href="">Link Demo</a>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="project">
-              <div class="project__img__3">
-                <div class="link__project">
-                  <i
-                    class="las la-play-circle"
-                    type="button"
-                    data-toggle="modal"
-                    data-target="#exampleModalCenter"
-                    data-video="https://www.youtube.com/embed/TMq5iZXpG6I?enablejsapi=1"
-                  ></i>
-                </div>
-              </div>
-            </div>
-            <div class="project__detail">
-              <h4>My Potfolio</h4>
-              <p>Jun 2023 - Jul 2023</p>
-              <ul>
-                <li>
-                  <span>Description: </span>
-                  E-learning is digital-based learning and training accessible
-                  on devices with internet for both teachers and students.
+                  My portfolio where you can get my information and my done
+                  projects
                 </li>
                 <li>
                   <span>Responsibility: </span>
@@ -495,10 +504,13 @@
                 </li>
                 <li>
                   <span>Technology:</span> HTML5 , CSS3, Jquery, Bootstrap 4
+                  ,Javascript ES6
                 </li>
               </ul>
-              <a href="">Link Github</a>
-              <a href="">Link Demo</a>
+              <a href="https://github.com/van-kiet/Masterwork-vankiet"
+                >Link Github</a
+              >
+              <a href="https://masterwork-vankiet-dev.vercel.app">Link Demo</a>
             </div>
           </div>
         </div>
@@ -516,7 +528,7 @@
         </div>
         <div class="footer__content">
           <div class="row">
-            <div class="col-6 footer__info">
+            <div class="col-md-6 col-sm-12 footer__info">
               <h2>Vo Van Kiet</h2>
               <hr />
               <ul>
@@ -542,7 +554,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-6 footer__form">
+            <div class="col-md-6 col-sm-12 footer__form">
               <form>
                 <div class="mb-3">
                   <label for="name" class="form-label">Fullname</label>
@@ -601,8 +613,11 @@
           </div>
         </div>
       </div>
+      <div class="copyright">© Copyright 2023 by Vo Van Kiet</div>
     </footer>
-
+    <div id="back-to-top" class="back-to-top">
+      <a href="#top"> <i class="las la-chevron-up"></i></a>
+    </div>
     <!-- JQUERY -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -674,11 +689,13 @@
     <script>
       $("#button-nav").click(function () {
         let isCheck = false;
-        if (isCheck) {
-          document.getElementById("nav").style.backgroundColor = "black ";
+        if (isCheck === false) {
+          document.getElementById("nav").classList.toggle("click-button");
           isCheck = true;
         } else {
-          document.getElementById("nav").style.backgroundColor = "none";
+          document.getElementById("nav").classList.toggle("bg__nav");
+
+          isCheck = false;
         }
       });
     </script>

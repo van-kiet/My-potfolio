@@ -75,28 +75,40 @@ const handleButtonOpen = () => {
 handleButtonOpen();
 
 const handleHeader = () => {
-  var header = document.getElementById("header");
+  var header = document.getElementById("nav");
   var prevScrollpos = window.scrollY;
   let isCheckScroll = false;
   window.onscroll = function () {
     var currentScrollPos = window.scrollY;
     if (currentScrollPos === 0) {
       isCheckScroll = false;
-      header.style.paddingTop = " 10px";
+      header.style.padding = " 5px 20px";
       header.style.boxShadow = " none";
       document.getElementById("nav").classList.toggle("bg__nav");
-      header.style.boxShadow = " 0px 2px 4px rgba(0, 0, 0, 0.5)";
+      document.getElementById("nav").style.backgroundColor = "#fff0";
+      document.getElementById("header").style.boxShadow =
+        " 0px 2px 4px rgba(0, 0, 0, 0.5)";
+      document.getElementById("hover-text").style.display = "block";
     } else if (!isCheckScroll) {
       isCheckScroll = true;
+      document.getElementById("nav").style.backgroundColor = "";
       // Nếu đang cuộn xuống, giảm chiều cao của header
-      header.style.padding = "0";
+      header.style.padding = "0 20px";
       document.getElementById("nav").classList.toggle("bg__nav");
-      header.style.boxShadow = " none";
+      document.getElementById("header").style.boxShadow = "none";
+      document.getElementById("hover-text").style.display = "none";
     }
     prevScrollpos = currentScrollPos;
   };
 };
 handleHeader();
+window.addEventListener("load", () => {
+  var currentScrollPos = window.scrollY;
+  if (currentScrollPos !== 0) {
+    document.getElementById("nav").style.backgroundColor = "black";
+    document.getElementById("nav").style.padding = "0 20px ";
+  }
+});
 let tag = document.createElement("script");
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName("script")[0];
@@ -205,3 +217,90 @@ function validateMessage() {
     document.getElementById("helpMessage").style.display = "none";
   }
 }
+let isCheckShow = false;
+function showText() {
+  if (isCheckShow === false) {
+    document.getElementById("message__text").style.display = "block";
+    document.getElementById("button-show").innerHTML = "Show less";
+    isCheckShow = true;
+  } else if (isCheckShow === true) {
+    document.getElementById("message__text").style.display = "none";
+    document.getElementById("button-show").innerHTML = "See more";
+    isCheckShow = false;
+  }
+}
+
+const skillItems = document.querySelectorAll(".skill__all");
+let activeItem = null;
+
+skillItems.forEach((item) => {
+  console.log(item);
+  item.addEventListener("click", () => {
+    if (window.innerWidth < 992) {
+      if (activeItem !== item) {
+        // Đóng phần tử đang mở (nếu có)
+        if (activeItem) {
+          activeItem.classList.remove("active");
+          const activeChildren = activeItem.querySelectorAll(".skill__child");
+          activeChildren.forEach((child) => {
+            child.classList.remove("active");
+          });
+        }
+
+        // Mở phần tử mới
+        item.classList.add("active");
+        const children = item.querySelectorAll(".skill__child");
+        children.forEach((child) => {
+          child.classList.add("active");
+        });
+        // if (window.innerWidth < 992) {
+        //   document.getElementById("ccc").style.height = "50%";
+        // }
+        // Cập nhật phần tử đang mở
+        activeItem = item;
+      } else {
+        // Đóng phần tử hiện tại nếu được nhấp lại
+        item.classList.remove("active");
+        const children = item.querySelectorAll(".skill__child");
+        children.forEach((child) => {
+          child.classList.remove("active");
+        });
+        // if (window.innerWidth < 992) {
+        //   document.getElementById("ccc").style.height = "100%";
+        // }
+        // Cập nhật phần tử đang mở
+        activeItem = null;
+      }
+    }
+  });
+});
+window.addEventListener("scroll", function () {
+  var backToTopButton = document.getElementById("back-to-top");
+  if (window.pageYOffset > 100) {
+    backToTopButton.style.display = "flex";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+});
+
+document.getElementById("back-to-top").addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Lấy tất cả các thẻ <a> trong danh sách menu
+var menuItems = document.querySelectorAll(".navbar-nav a");
+
+// Lặp qua từng mục trong danh sách menu và thêm sự kiện click
+menuItems.forEach(function (item) {
+  console.log(item);
+  item.addEventListener("click", function () {
+    // Xóa lớp active khỏi tất cả các mục menu
+    menuItems.forEach(function (menuItem) {
+      menuItem.classList.remove("active");
+    });
+
+    // Thêm lớp active vào mục menu được nhấp vào
+    this.classList.add("active");
+  });
+});
