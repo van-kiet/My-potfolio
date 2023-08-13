@@ -32,6 +32,7 @@ function type() {
 }
 //button download
 type();
+
 const myButton = document.getElementById("myButton__download");
 
 myButton.addEventListener("click", () => {
@@ -40,14 +41,12 @@ myButton.addEventListener("click", () => {
   }, 1000);
 });
 
-//button
 const mainButton = document.getElementById("main-button");
 const buttonContainer = document.getElementById("button-container");
 mainButton.addEventListener("click", function () {
   buttonContainer.classList.toggle("show");
 });
 
-//handleButtonOpen
 const handleButtonOpen = () => {
   let isCheck = false;
   const clickBtn = document.getElementById("main-button");
@@ -73,7 +72,7 @@ const handleButtonOpen = () => {
   });
 };
 handleButtonOpen();
-
+//Header
 const handleHeader = () => {
   var header = document.getElementById("nav");
   var prevScrollpos = window.scrollY;
@@ -102,6 +101,7 @@ const handleHeader = () => {
   };
 };
 handleHeader();
+//custom youtube
 window.addEventListener("load", () => {
   var currentScrollPos = window.scrollY;
   if (currentScrollPos !== 0) {
@@ -114,13 +114,12 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// Create YouTube player(s) after the API code downloads.
 let player;
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("player-1");
 }
-
+//send message
 const submitButton = document.getElementById("submit-button");
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -168,7 +167,7 @@ submitButton.addEventListener("click", (e) => {
     document.getElementById("message").value = "";
   }
 });
-
+//validate
 const nameInput = document.getElementById("name");
 nameInput.addEventListener("blur", validateName);
 
@@ -229,7 +228,7 @@ function showText() {
     isCheckShow = false;
   }
 }
-
+//Show skill
 const skillItems = document.querySelectorAll(".skill__all");
 let activeItem = null;
 
@@ -238,7 +237,6 @@ skillItems.forEach((item) => {
   item.addEventListener("click", () => {
     if (window.innerWidth < 992) {
       if (activeItem !== item) {
-        // Đóng phần tử đang mở (nếu có)
         if (activeItem) {
           activeItem.classList.remove("active");
           const activeChildren = activeItem.querySelectorAll(".skill__child");
@@ -247,60 +245,35 @@ skillItems.forEach((item) => {
           });
         }
 
-        // Mở phần tử mới
         item.classList.add("active");
         const children = item.querySelectorAll(".skill__child");
         children.forEach((child) => {
           child.classList.add("active");
         });
-        // if (window.innerWidth < 992) {
-        //   document.getElementById("ccc").style.height = "50%";
-        // }
-        // Cập nhật phần tử đang mở
+
         activeItem = item;
       } else {
-        // Đóng phần tử hiện tại nếu được nhấp lại
         item.classList.remove("active");
         const children = item.querySelectorAll(".skill__child");
         children.forEach((child) => {
           child.classList.remove("active");
         });
-        // if (window.innerWidth < 992) {
-        //   document.getElementById("ccc").style.height = "100%";
-        // }
-        // Cập nhật phần tử đang mở
+
         activeItem = null;
       }
     }
   });
 });
-window.addEventListener("scroll", function () {
-  var backToTopButton = document.getElementById("back-to-top");
-  if (window.pageYOffset > 100) {
-    backToTopButton.style.display = "flex";
-  } else {
-    backToTopButton.style.display = "none";
-  }
-});
-
-document.getElementById("back-to-top").addEventListener("click", function (e) {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// Lấy tất cả các thẻ <a> trong danh sách menu
+//active nav
 var menuItems = document.querySelectorAll(".navbar-nav a");
 
-// Lặp qua từng mục trong danh sách menu và thêm sự kiện click
 menuItems.forEach(function (item) {
   console.log(item);
   item.addEventListener("click", function () {
-    // Xóa lớp active khỏi tất cả các mục menu
     menuItems.forEach(function (menuItem) {
       menuItem.classList.remove("active");
     });
 
-    // Thêm lớp active vào mục menu được nhấp vào
     this.classList.add("active");
   });
 });

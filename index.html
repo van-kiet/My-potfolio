@@ -156,7 +156,7 @@
                 </div>
               </div>
               <a
-                href="./files/CV_Vo_Van_Kiet_Front_end_Developer _Intern.pdf"
+                href="./files/CV_Vo_Van_Kiet_Front_end_Developer_Intern.pdf"
                 download
               >
                 <button id="myButton__download">DOWNLOAD CV</button>
@@ -411,7 +411,7 @@
                     type="button"
                     data-toggle="modal"
                     data-target="#exampleModalCenter"
-                    data-video="https://www.youtube.com/embed/OycxSRkN6ck?enablejsapi=1"
+                    data-video="https://www.youtube.com/embed/OjPxzUtt1WI?enablejsapi=1"
                   ></i>
                 </div>
               </div>
@@ -431,11 +431,11 @@
                 </li>
                 <li>
                   <span>Technology:</span> HTML5 , CSS3, Jquery, Bootstrap
-                  4,Javascript ES6 , SASS/SCSS
+                  4,Javascript ES6 , SASS/SCSS , Slick
                 </li>
               </ul>
               <a href="https://github.com/van-kiet/My-potfolio">Link Github</a>
-              <a href="">Link Demo</a>
+              <a href="https://my-potfolio-eight.vercel.app/">Link Demo</a>
             </div>
           </div>
 
@@ -615,8 +615,8 @@
       </div>
       <div class="copyright">© Copyright 2023 by Vo Van Kiet</div>
     </footer>
-    <div id="back-to-top" class="back-to-top">
-      <a href="#top"> <i class="las la-chevron-up"></i></a>
+    <div id="backtotop" class="back-to-top">
+      <a href="#"> <i class="las la-chevron-up"></i></a>
     </div>
     <!-- JQUERY -->
 
@@ -655,6 +655,20 @@
       $(document).ready(function () {
         $(".slideshow-button").click(function () {
           player.stopVideo();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop()) {
+            $("#backtotop").fadeIn();
+          } else {
+            $("#backtotop").fadeOut();
+          }
+        });
+        $("#backtotop").click(function () {
+          $("html,body").animate({ scrollTop: 0 }, 500);
         });
       });
     </script>
